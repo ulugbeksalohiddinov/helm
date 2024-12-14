@@ -1,18 +1,3 @@
-    ```
-    apiVersion: v1
-    kind: Pod
-    metadata:
-      creationTimestamp: null
-      labels:
-         run: nginx-nodename
-      name: nginx-nodename
-    spec:
-      nodeName: <node_name> # add
-      containers:
-      - image: nginx
-        name: nginx-nodename
-        resources: {}
-      dnsPolicy: ClusterFirst
-      restartPolicy: Always
-    status: {}
-    ```
+[template.yaml.txt](https://github.com/user-attachments/files/18134372/template.yaml.txt)
+
+[values.yaml.txt](https://github.com/user-attachments/files/18134373/values.yaml.txt)
