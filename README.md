@@ -1,5 +1,3 @@
-template.yaml
-
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -32,54 +30,3 @@ spec:
           {{- toYaml .Values.resources | nindent 10 }}
         env:
         {{- toYaml .Values.env | nindent 8}}
-
-
-values.yaml
-
-#Affinity
-affinity:
-  nodeAffinity:
-    requiredDuringSchedulingIgnoredDuringExecution:
-      nodeSelectorTerms:
-      - matchExpressions:
-        - key: ulugbek
-          operator: In
-          values:
-          - salohiddinov
-
-#Replicas
-replicaCount: 3
-revisionHistoryLimit: 3
-
-#Image
-image:
-  repository: myapp/myapp-image
-  tag: latest
-  pullPolicy: IfNotPresent
-  pullSecretName: my-pull-secret
-
-#Ports
-containerPort: 8080
-
-#Resources
-resources:
-  requests:
-    memory: "64Mi"
-    cpu: "250m"
-  limits:
-    memory: "128Mi"
-    cpu: "500m"
-    
-    
-#ENV-ConfigMap
-env:
-- name: ENV
-  valueFrom:
-    configMapKeyRef:
-      name: environment
-      key: ENV
-- name: AUTHOR
-  valueFrom:
-    configMapKeyRef:
-      name: environment
-      key: AUTHOR    
