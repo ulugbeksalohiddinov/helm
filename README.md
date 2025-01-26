@@ -6,9 +6,6 @@
 
 [deploy-fin.txt](https://github.com/user-attachments/files/18217891/deploy-fin.txt)
 
-https://www.youtube.com/watch?v=_mjw0C6jOTM
-
-
 [mon.txt](https://github.com/user-attachments/files/18409558/mon.txt)
 
 [post.txt](https://github.com/user-attachments/files/18409557/post.txt)
