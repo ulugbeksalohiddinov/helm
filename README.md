@@ -9,3 +9,10 @@
 [mon.txt](https://github.com/user-attachments/files/18409558/mon.txt)
 
 [post.txt](https://github.com/user-attachments/files/18409557/post.txt)
+
+
+**For K3S**
+
+export KUBECONFIG=/etc/rancher/k3s/k3s.yaml
+kubectl get pods --all-namespaces
+helm ls --all-namespaces
