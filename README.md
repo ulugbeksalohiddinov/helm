@@ -13,6 +13,8 @@
 
 **For K3S**
 
-export KUBECONFIG=/etc/rancher/k3s/k3s.yaml
-kubectl get pods --all-namespaces
-helm ls --all-namespaces
+  export KUBECONFIG=/etc/rancher/k3s/k3s.yaml
+
+  kubectl get pods --all-namespaces
+
+  helm ls --all-namespaces
