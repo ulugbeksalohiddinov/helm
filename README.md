@@ -18,7 +18,7 @@
     kubectl get pods --all-namespaces
 
     helm ls --all-namespaces
-
+----------------------------------------------------------------
 
         helm create test-helm 
         helm repo list
