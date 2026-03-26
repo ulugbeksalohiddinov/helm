@@ -18,3 +18,19 @@
     kubectl get pods --all-namespaces
 
     helm ls --all-namespaces
+
+
+        helm create test-helm 
+        helm repo list
+        helm  repo add bitnami https://charts.bitnami.com/bitnami
+        helm show chart chart-name
+
+        helm install test ./test-helm -n test #test-helm dirdagi helmni install qilish
+
+#Agar helmda o'zgarishlar bo'lsa va boshqattan run qilish kerak bo'lsa
+        helm upgrade --install	test ./test-helm -n test
+
+        helm uninstall test
+
+        helm package --version 0.0.1 . # tar gz yaratib beradi arxivlangan
+        helm repo index test-helm   # helm papkdan tashqarida turib qilinadi. test-helm papkani ichida index.yaml yaratadi.
