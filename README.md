@@ -42,13 +42,13 @@
 Helm repo yaratamiz.
 
         helm create helm-front
-        cd helm-front
+        cd helm-front/templates/
 
 templates papkada keraksiz resurslarni delete qilamiz.
 
         rm -r NOTES.txt httproute.yaml tests hpa.yaml serviceaccount.yaml
 
-temlatelarni config qilinadi.
+temlateslarni config qilinadi.
 
 deployment.yaml:
 
