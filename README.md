@@ -40,13 +40,16 @@
 **Helm bilan noldan repo yaratib, ishka tushirish**
 
 Helm repo yaratamiz.
+
         helm create helm-front
         cd helm-front
 
 templates papkada keraksiz resurslarni delete qilamiz.
+
         rm -r NOTES.txt httproute.yaml tests hpa.yaml serviceaccount.yaml
 
 temlatelarni config qilinadi.
+
 deployment.yaml:
 
         apiVersion: apps/v1
