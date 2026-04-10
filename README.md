@@ -167,3 +167,45 @@ Keyin helm reponi install qilamiz
 Agar manifestda yoki kodeda o'zgarish bo'lsa update qilinadi
 
         helm upgrade --install	front ./helm-front -n prod
+
+
+
+**Rollout and Rollback**
+
+Check rollout status
+
+        kubectl rollout status deployment/front-app -n prod
+
+Qaysi versiya ishlayotganini ko‘rasiz.
+
+        helm list -n prod
+
+Qaysi revision’lar mavjudligini bilib olasiz.
+
+        helm history front -n prod
+
+Yangi reliz chiqanda update qilish
+
+        helm upgrade front ./front -n prod
+        
+Yoki --install bilan:
+
+        helm upgrade --install front ./front -n prod
+
+-- Rollback qanday ishlaydi
+
+Helm rollback komandasi:
+
+helm rollback <release> <revision> -n <namespace>
+
+<release> → front (sizning release nomi) - <revision> → qaysi revision’ga qaytmoqchi ekaningiz
+-n <namespace> → prod
+
+Misol: agar siz revision 2 holatiga qaytmoqchi bo‘lsangiz:
+
+        helm rollback front 2 -n prod
+
+Bu komanda front release’ini revision 2 holatiga tiklaydi.
+Kubernetes Deployment avtomatik eski Pod’lar bilan tiklanadi.
+Rollback amalga oshgach, yangi release avtomatik navbatdagi revision sifatida saqlanadi (masalan, 7-revision).+
+
